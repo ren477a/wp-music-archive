@@ -1,4 +1,4 @@
-# wp-music-archive
+# Music Archive
 
 ## Django Setup
 
@@ -44,4 +44,18 @@ python manage.py migrate
 7. Start the server
 ```
 python manage.py runserver
+```
+
+## React Setup
+1. Go to wp-music-archive/static
+```
+cd static
+```
+2. Install modules
+```
+npm install
+```
+3. Run react server
+```
+npm start
 ```
