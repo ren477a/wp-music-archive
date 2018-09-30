@@ -47,15 +47,16 @@ python manage.py runserver
 ```
 
 ## React Setup
-1. Go to wp-music-archive/static
+1. Install [node and npm](https://nodejs.org/en/download/). 
+2. Go to wp-music-archive/static
 ```
 cd static
 ```
-2. Install modules
+3. Install modules
 ```
 npm install
 ```
-3. Run react server
+4. Run react server
 ```
 npm start
 ```
