@@ -6,4 +6,4 @@ class Song(models.Model):
     artist = models.CharField(max_length=250)
     length = models.DurationField()
     views = models.CharField(max_length=250)
-    # photo = models.FileField()
+    image = models.FileField(default=None)
