@@ -1,0 +1,21 @@
+.song-container {
+  list-style-type: none;
+  padding: 0;
+  display: inline-flex;
+}
+.song-list {
+  padding: 1rem 2rem 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  min-width: 9rem;
+  border: solid 1px rgba(0, 0, 0, 0.05);
+  background-color: #c2c9ff;
+  border-bottom: solid 4px #454a75;
+}
+
+h1 {
+  color: #c553e9;
+}
+.rowdiv {
+  padding-top: 50px;
+}
