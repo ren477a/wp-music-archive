@@ -134,10 +134,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "music-archive\media")
-
-
 CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:3000'
 )
