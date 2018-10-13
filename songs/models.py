@@ -7,3 +7,6 @@ class Song(models.Model):
     length = models.DurationField()
     views = models.IntegerField(default=0)
     image = models.FileField(default=None)
+
+    def __str__(self):
+        return self.title
