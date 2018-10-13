@@ -13,7 +13,7 @@ class SongViewSet(viewsets.ModelViewSet):
 
 class TopSongsView(generics.ListAPIView):
     serializer_class = SongSerializer
-    queryset = Song.objects.order_by('views')[:3]
+    queryset = Song.objects.order_by('-views')[:3]
 
     def get_queryset(self):
-        return Song.objects.order_by('views')[:3]
+        return Song.objects.order_by('-views')[:3]
