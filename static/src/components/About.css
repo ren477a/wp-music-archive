@@ -1,0 +1,20 @@
+body,
+*:before,
+*:after {
+  background-color: #1f1e30;
+  font-family: "PT Sans Caption";
+  color: #c553e9;
+}
+.row {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+.content {
+  background-color: #28293d;
+  color: #c553e9;
+  border-radius: 15px;
+  padding: 20px;
+}
+.pics {
+  height: 400px;
+}

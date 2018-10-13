@@ -1,0 +1,23 @@
+span.song-container {
+  list-style-type: none;
+  padding: 0;
+  display: inline-flex;
+}
+span.topsong {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  display: inline-block;
+}
+
+img {
+  max-width: 100px;
+}
+
+h1 {
+  color: #c553e9;
+}
+.rowdiv {
+  padding-top: 50px;
+}
