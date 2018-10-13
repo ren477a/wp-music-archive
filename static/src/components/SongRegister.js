@@ -22,15 +22,24 @@ class SongRegister extends Component {
   submitForm(e) {
     e.preventDefault();
     console.log(document.getElementById("image").value);
+
+    const formData = new FormData();
+    
+    formData.append('title', document.getElementById("title").value)
+    formData.append('artist', document.getElementById("artist").value)
+    formData.append('length', document.getElementById("length").value)
+    formData.append('views', document.getElementById("views").value)
+    formData.append('image', document.getElementById("image").files[0])
+    
+
     axios
       .post(
         "http://127.0.0.1:8000/api/songs/",
+        formData, 
         {
-          title: document.getElementById("title").value,
-          artist: document.getElementById("artist").value,
-          length: document.getElementById("length").value,
-          views: document.getElementById("views").value,
-          image: document.getElementById("image").value
+          headers: {
+            'content-type': 'multipart/form-data'
+          }
         },
         response => {
           console.log("Success Adding!"); // check fully.
