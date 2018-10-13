@@ -16,7 +16,11 @@ class SongSearch extends Component {
     this.getSongs();
   }
 
-  getSongs() {}
+  getSongs() {
+    axios.get("http://127.0.0.1:8000/api/songs").then(results => {
+      this.setState({ songs: results.data });
+    });
+  }
 
   createTable() {
     let songs = this.state.songs;
