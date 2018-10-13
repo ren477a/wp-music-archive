@@ -1,25 +1,11 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class SongSearch extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      songs: [
-        {
-          id: 1,
-          title: "Victorious",
-          artist: "Panic! At The Disco",
-          length: "00:03:04",
-          views: "3,892,453"
-        },
-        {
-          id: 2,
-          title: "Lucid Dreams",
-          artist: "Juice WRLD",
-          length: "00:03:50",
-          views: "10,239,893"
-        }
-      ]
+      songs: []
     };
 
     this.createTable = this.createTable.bind(this);
@@ -30,11 +16,7 @@ class SongSearch extends Component {
     this.getSongs();
   }
 
-  getSongs() {
-    fetch("http://localhost:8000/api/songs")
-      .then(results => results.json())
-      .then(results => this.setState({ songs: results }));
-  }
+  getSongs() {}
 
   createTable() {
     let songs = this.state.songs;
@@ -58,14 +40,33 @@ class SongSearch extends Component {
   }
 
   handleSearch(searchFor) {
-    let titles = this.state.songs;
-    let matches = titles.filter(v =>
-      v.title.toLowerCase().includes(searchFor.toLowerCase())
-    );
-    console.log(matches);
-    this.setState({ songs: matches });
+    axios.get("http://127.0.0.1:8000/api/songs").then(results => {
+      var length = results.data.length;
+      var i;
+      var res = [];
+      for (i = 0; i < length; i++) {
+        if (
+          results.data[i].title.toLowerCase().includes(searchFor.toLowerCase())
+        ) {
+          console.log("HELLO");
+          res.push(results.data[i]);
+        }
+      }
 
-    this.createTable();
+      this.setState({ songs: res });
+      console.log(res);
+      console.log(results);
+      console.log(length);
+      console.log(results.data);
+    });
+    //let titles = this.state.songs;
+    //let matches = titles.filter(v =>
+    //  v.title.toLowerCase().includes(searchFor.toLowerCase())
+    //);
+    //console.log(matches);
+    //this.setState({ songs: matches });
+
+    //this.createTable();
   }
 
   render() {

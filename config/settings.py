@@ -30,6 +30,8 @@ SECRET_KEY = 'mkvt_ni=uj+^l!^6_#n!=g0cg=1&=i481gxq0@=q@ay76t2n$-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
 ALLOWED_HOSTS = []
 
 
@@ -50,7 +52,6 @@ INSTALLED_APPS = [
     
     'songs',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -131,6 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "music-archive\media")
 
 
 CORS_ORIGIN_WHITELIST = (

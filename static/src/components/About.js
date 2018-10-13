@@ -1,5 +1,9 @@
 import React from "react";
 import "./About.css";
+import Efren from "../img/efren.jpg";
+import Paul from "../img/paul.jpg";
+import Freanu from "../img/freanu.jpg";
+import JD from "../img/jd.jpg";
 
 const About = () => {
   return (
@@ -14,19 +18,11 @@ const About = () => {
         <div className="col-lg-2" />
         <div className="col-lg-8">
           <p>
-            "Vivamus blandit scelerisque enim non volutpat. Nam ultrices est id
-            nunc lacinia efficitur. Integer vehicula sollicitudin est faucibus
-            porttitor. Nunc vestibulum vulputate eros, non blandit nisi lobortis
-            vitae. Aliquam ut orci fermentum, iaculis enim blandit, viverra
-            nunc. In semper sem nec odio maximus, ut blandit orci euismod. Nulla
-            vitae nisi convallis, hendrerit mi non, varius enim. Vivamus ipsum
-            nibh, placerat at posuere finibus, sollicitudin non neque. Morbi
-            lobortis ornare eleifend. Aliquam vehicula lectus ac lobortis
-            feugiat. Nunc pulvinar mollis enim et ornare. Aliquam ut eros
-            dignissim, volutpat eros a, vehicula urna. Vestibulum in odio
-            mauris." 
+            "Music Archive was created by Efren Mercado, Paul Prieto, Freanu
+            Peria, and Jaydee Diano. In partial fulfillment of the requirements
+            for the subject IT 201 - Web Programming. "
           </p>
-          <em>- The Company</em>
+          <em>- The Team</em>
         </div>
         <div className="col-lg-2" />
       </div>
@@ -58,20 +54,12 @@ const About = () => {
           </blockquote>
         </div>
         <div className="col-sm12 col-md-6 col-lg-4">
-          <img
-            src="./img/efren.jpg"
-            alt="efrenimg"
-            className="rounded-circle pics"
-          />
+          <img src={Efren} alt="efrenimg" className="rounded-circle pics" />
         </div>
       </div>
       <div className="row">
         <div className="col-sm12 col-md-6 col-lg-4">
-          <img
-            src="./img/paul.jpg"
-            alt="efrenimg"
-            className="rounded-circle pics"
-          />
+          <img src={Paul} alt="efrenimg" className="rounded-circle pics" />
         </div>
         <div className="col-sm-12 col-md-6 col-lg-8 content">
           <blockquote>
@@ -115,21 +103,13 @@ const About = () => {
           </blockquote>
         </div>
         <div className="col-sm12 col-md-6 col-lg-4">
-          <img
-            src="./img/jd.jpg"
-            alt="efrenimg"
-            className="rounded-circle pics"
-          />
+          <img src={JD} alt="efrenimg" className="rounded-circle pics" />
         </div>
       </div>
 
       <div className="row">
         <div className="col-sm12 col-md-6 col-lg-4">
-          <img
-            src="./img/freanu.jpg"
-            alt="efrenimg"
-            className="rounded-circle pics"
-          />
+          <img src={Freanu} alt="efrenimg" className="rounded-circle pics" />
         </div>
         <div className="col-sm-12 col-md-6 col-lg-8 content">
           <blockquote>
