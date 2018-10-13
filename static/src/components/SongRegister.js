@@ -42,12 +42,16 @@ class SongRegister extends Component {
           }
         },
         response => {
-          console.log("Success Adding!"); // check fully.
+          alert("Song Successfully Registered!");
         }
       )
       .then(response => {
-        console.log(response);
-      });
+        document.getElementById("title").value = null;
+        document.getElementById("artist").value = null;
+        document.getElementById("length").value = null;
+        document.getElementById("views").value = null;
+        document.getElementById("image").value = null;
+      })
   }
 
   render() {
