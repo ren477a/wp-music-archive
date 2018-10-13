@@ -14,7 +14,7 @@ class Home extends Component {
   }
 
   getSongs() {
-    axios.get("http://127.0.0.1:8000/api/songs").then(results => {
+    axios.get("http://127.0.0.1:8000/api/songs/top/").then(results => {
       //var topsongs = this.state.topSongs;
       //this.setState({ topSongs: topsongs });
       //console.log(this.state);
