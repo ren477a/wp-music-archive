@@ -17,7 +17,7 @@ class SongSearch extends Component {
   }
 
   getSongs() {
-    axios.get("http://127.0.0.1:8000/api/songs").then(results => {
+    axios.get("http://127.0.0.1:8000/api/songs/").then(results => {
       this.setState({ songs: results.data });
     });
   }
@@ -32,7 +32,7 @@ class SongSearch extends Component {
 
       //Inner loop to create children
       for (let j = 0; j < 4; j++) {
-        if (j === 0) children.push(<td>{songs[i].title}</td>);
+        if (j === 0) children.push(<td><a href = {"http://127.0.0.1:3000/song/" + songs[i].id}>{songs[i].title}</a></td>);
         if (j === 1) children.push(<td>{songs[i].artist}</td>);
         if (j === 2) children.push(<td>{songs[i].length}</td>);
         if (j === 3) children.push(<td>{songs[i].views}</td>);
@@ -44,7 +44,7 @@ class SongSearch extends Component {
   }
 
   handleSearch(searchFor) {
-    axios.get("http://127.0.0.1:8000/api/songs").then(results => {
+    axios.get("http://127.0.0.1:8000/api/songs/").then(results => {
       var length = results.data.length;
       var i;
       var res = [];

@@ -29,12 +29,15 @@ class Home extends Component {
             return (
               <div key={song.id} xs="6">
                 <span className="topsong">
+                  <a href={"http://127.0.0.1:3000/song/" + song.id}>
                   <img
-                    src={song.image}
+                    src={song.image} 
                     alt={"Cover Photo: " + song.title}
                     width="300px"
                     length="300px"
+                    
                   />
+                  </a>
                   <h3> {song.title} </h3>
                   <p> {song.artist} </p>
                   <p> {song.views} </p>

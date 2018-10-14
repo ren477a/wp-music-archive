@@ -6,18 +6,6 @@ class SongRegister extends Component {
   state = {
     formFields: []
   };
-  componentDidMount() {
-    // Assuming you are using jQuery,
-    // if not, try fetch().
-    // Note that 2 is hardcoded, get your user id from
-    // URL or session or somewhere else.
-    axios.get("http://127.0.0.1:8000/api/songs", data => {
-      this.setState({
-        formFields: data.fields // fields is an array
-      });
-      // console.log(data);
-    });
-  }
 
   submitForm(e) {
     e.preventDefault();
@@ -42,10 +30,12 @@ class SongRegister extends Component {
           }
         },
         response => {
-          alert("Song Successfully Registered!");
+          //alert("Song Successfully Registered!");
+          console.log("Success");
         }
       )
       .then(response => {
+        alert("Song Successfully Registered!");
         document.getElementById("title").value = null;
         document.getElementById("artist").value = null;
         document.getElementById("length").value = null;

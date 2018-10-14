@@ -8,7 +8,7 @@ import JD from "../img/jd.jpg";
 const About = () => {
   return (
     <div className="container-fluid">
-      <div className="row">
+      <div className="row" style={{textAlign: "center"}} >
         <div className="col-lg-12">
           <h2 style={{ color: "#C553E9" }}>About the Music Archive...</h2>
         </div>

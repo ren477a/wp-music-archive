@@ -11,6 +11,7 @@ import SongSearch from "./components/SongSearch";
 import Err from "./components/Err";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import SongDetails from "./components/SongDetails";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/search" component={SongSearch} />
             <Route path="/register" component={SongRegister} />
+            <Route path="/song/:id" component={SongDetails} />
             <Route component={Err} />
           </Switch>
           <Footer />
