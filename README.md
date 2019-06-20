@@ -61,6 +61,8 @@ npm install
 npm start
 ```
 
+---
+
 **Contributors:**
 
 1. Efren Mercado Jr
