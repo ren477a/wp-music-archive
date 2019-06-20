@@ -61,11 +61,9 @@ npm install
 npm start
 ```
 
-Contributors:
+**Contributors:**
 
-Efren Mercado Jr
-
-Paul Christian Prieto
-
-Freanu Peria
+1. Efren Mercado Jr
+2. Paul Christian Prieto
+3. Freanu Peria
 
